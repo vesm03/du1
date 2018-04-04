@@ -3,7 +3,6 @@ package com.github.vesm03.du1.ui;
 import java.util.Observable;
 import java.util.Observer;
 
-import com.github.vesm03.du1.logika.IHra;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -30,7 +29,6 @@ public class HomeController extends GridPane implements Observer {
 	
 	//promenne pro graficke rozhrani
 	@FXML private TextField vstupniText;
-	private IHra hra;
 	private String vyberObrazku = "";
 	private String obrazek = "";
 	private int last = 10;
@@ -163,8 +161,7 @@ public class HomeController extends GridPane implements Observer {
 	 * kontroleru a zobrazí stav hry v grafice.
 	 * @param objekt spuštěné hry
 	 */
-	public void inicializuj(IHra hra) {
-		this.hra = hra;
+	public void inicializuj() {
 		spravne.setText("0");
 		spatne.setText("0");
 		hadej.setText("");

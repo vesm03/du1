@@ -23,7 +23,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.vesm03.du1.ui.HomeController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.vesm03.du1.ui.HomeController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -31,9 +31,8 @@
   </columnConstraints>
   <rowConstraints>
     <RowConstraints vgrow="NEVER" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="613.0" minHeight="10.0" prefHeight="594.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="379.0" minHeight="10.0" prefHeight="174.0" valignment="CENTER" vgrow="ALWAYS" />
     <RowConstraints vgrow="NEVER" />
       <RowConstraints vgrow="NEVER" />
   </rowConstraints>
@@ -48,25 +47,15 @@
           </Menu>
         </menus>
       </MenuBar>
-      <VBox GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="2">
+      <VBox GridPane.rowIndex="1">
          <children>
-            <Button fx:id="bStrawberry" mnemonicParsing="false" onAction="#klikObrazek1">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </VBox.margin>
-               <tooltip>
-                  <Tooltip text="Jahoda" />
-               </tooltip>
-            </Button>
-            <Button fx:id="bPear" mnemonicParsing="false" onAction="#klikObrazek2" translateX="360.0" translateY="-51.0">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </VBox.margin>
-               <tooltip>
-                  <Tooltip text="Hruška" />
-               </tooltip>
-            </Button>
-            <Button fx:id="bMelon" mnemonicParsing="false" onAction="#klikObrazek3" translateX="720.0" translateY="-103.0">
+            <fx:define>
+   				<Image fx:id="bMelonImage" url="@meloun.jpg" />
+			</fx:define>
+            <Button fx:id="bMelon" mnemonicParsing="false" onAction="#klikObrazek3">
+               <graphic>
+        			<ImageView image="$bMelonImage" />
+     			</graphic>
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
@@ -74,7 +63,13 @@
                   <Tooltip text="Meloun" />
                </tooltip>
             </Button>
-            <Button fx:id="bOrange" mnemonicParsing="false" onAction="#klikObrazek4" translateY="90.0">
+            <fx:define>
+   				<Image fx:id="bOrangeImage" url="@pomeranc.jpg" />
+			</fx:define>
+            <Button fx:id="bOrange" mnemonicParsing="false" onAction="#klikObrazek4">
+               <graphic>
+        			<ImageView image="$bOrangeImage" />
+     			</graphic>
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
@@ -82,7 +77,34 @@
                   <Tooltip text="Pomeranč" />
                </tooltip>
             </Button>
-            <Button fx:id="bPepper" mnemonicParsing="false" onAction="#klikObrazek5" translateX="360.0" translateY="40.0">
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <fx:define>
+   				<Image fx:id="bPearImage" url="@hruska.jpg" />
+			</fx:define>
+            <Button fx:id="bPear" mnemonicParsing="false" onAction="#klikObrazek2">
+               <graphic>
+        			<ImageView image="$bPearImage" />
+     			</graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <tooltip>
+                  <Tooltip text="Hruška" />
+               </tooltip>
+            </Button>
+            <fx:define>
+   				<Image fx:id="bPepperImage" url="@paprika.jpg" />
+			</fx:define>
+            <Button fx:id="bPepper" mnemonicParsing="false" onAction="#klikObrazek5">
+               <graphic>
+        			<ImageView image="$bPepperImage" />
+     			</graphic>
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
@@ -90,7 +112,31 @@
                   <Tooltip text="Paprika" />
                </tooltip>
             </Button>
-            <Button fx:id="bCarrot" mnemonicParsing="false" onAction="#klikObrazek6" translateX="725.0">
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+         	<fx:define>
+   				<Image fx:id="bStrawberryImage" url="@jahoda.jpg" />
+			</fx:define>
+            <Button fx:id="bStrawberry" mnemonicParsing="false" onAction="#klikObrazek1">
+            	<graphic>
+        			<ImageView image="$bStrawberryImage" />
+     			</graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <tooltip>
+                  <Tooltip text="Jahoda" />
+               </tooltip>
+            </Button>
+            <fx:define>
+   				<Image fx:id="bCarrotImage" url="@mrkev.jpg" />
+			</fx:define>
+            <Button fx:id="bCarrot" mnemonicParsing="false" onAction="#klikObrazek6">
+               <graphic>
+        			<ImageView image="$bCarrotImage" />
+     			</graphic>
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
@@ -99,28 +145,25 @@
                </tooltip>
             </Button>
          </children>
-         <GridPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </GridPane.margin>
       </VBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+      <VBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
          <children>
-            <Button mnemonicParsing="false" onAction="#hadejSlovo" text="Hádej" translateX="20.0">
-               <HBox.margin>
+            <Button mnemonicParsing="false" onAction="#hadejSlovo" text="Hádej" >
+               <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </HBox.margin>
+               </VBox.margin>
             </Button>
-            <Label fx:id="hadej" text="Label" translateX="-63.0" translateY="50.0">
-               <HBox.margin>
+            <Label fx:id="hadej" text="Label" >
+               <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </HBox.margin>
+               </VBox.margin>
                <font>
                   <Font size="50.0" />
                </font>
             </Label>
          </children>
-      </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      </VBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
             <Label text="Správně: ">
                <HBox.margin>
@@ -134,7 +177,7 @@
             </Label>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <children>
             <Label text="Špatně: ">
                <HBox.margin>

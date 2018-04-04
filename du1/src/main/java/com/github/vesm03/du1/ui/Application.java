@@ -1,7 +1,6 @@
 package com.github.vesm03.du1.ui;
 
 
-import com.github.vesm03.du1.logika.Hra;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -42,7 +41,7 @@ public class Application extends javafx.application.Application {
 		Parent root = loader.load();
 
 		HomeController controller = loader.getController();
-		controller.inicializuj(new  Hra());
+		controller.inicializuj();
 		
         primaryStage.setTitle("Angličtina");
         primaryStage.setScene(new Scene(root));
