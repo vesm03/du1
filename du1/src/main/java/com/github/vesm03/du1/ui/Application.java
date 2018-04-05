@@ -45,6 +45,8 @@ public class Application extends javafx.application.Application {
 		
         primaryStage.setTitle("Angličtina");
         primaryStage.setScene(new Scene(root));
+        primaryStage.setMinHeight(740.0);
+        primaryStage.setMinWidth(780.0);
         primaryStage.show();
 		
 	}
