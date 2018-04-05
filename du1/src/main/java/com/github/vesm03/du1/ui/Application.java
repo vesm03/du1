@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 /**
  * Třída slouží ke spuštění aplikace.
  * Při spuštění bez parametru konstruuje okno aplikace,
- * s parametrem -text se spouští v textovém režimu
+ * 
  * 
  * @author Martin Vesely
  *
